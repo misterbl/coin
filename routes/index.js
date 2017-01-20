@@ -14,11 +14,12 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   var amount = new Amount(req.body.amount);
-console.log(amount);
-  res.render('result');
-    console.log("hello2");
-
+  amount.convert();
+  console.log(amount.twoPounds);
+  // amount.convert().then(function(amount){
+  res.render('result', {amount: amount});
 });
+// });
 
 
 module.exports = router;
