@@ -5,6 +5,39 @@
     <title></title>
   </head>
   <body>
-    the result is   <%= amount.twoPounds %>
+    <h1> For an amount of <%= amount.amount %></h1><br>
+    <h1>The equivalent in coins is:</h1><br>
+    <% if (amount.twoPounds > 0) { %>
+    <h2> £2 coins: <%= amount.twoPounds %></h2> <br>
+    <% } %>
+
+    <% if (amount.onePound > 0) { %>
+    <h2>£1 coins: <%= amount.onePound %></h2><br>
+    <% } %>
+
+    <% if (amount.fiftyP > 0) { %>
+    <h2>50p coins: <%= amount.fiftyP %></h2><br>
+    <% }  %>
+
+    <% if (amount.twentyP > 0) { %>
+    <h2>20p coins: <%= amount.twentyP %></h2><br>
+    <% }  %>
+
+    <% if (amount.tenP > 0) { %>
+    <h2>10p coins: <%= amount.tenP %></h2><br>
+    <% }  %>
+
+    <% if (amount.fiveP > 0) { %>
+    <h2>5p coins: <%= amount.fiveP %></h2><br>
+    <% }  %>
+
+    <% if (amount.twoP > 0) { %>
+    <h2>2p coins: <%= amount.twoP %></h2><br>
+    <% }  %>
+
+    <% if (amount.oneP > 0) { %>
+    <h2>1p coins: <%= amount.oneP %></h2>
+    <% }  %>
+
   </body>
 </html>
