@@ -1,7 +1,6 @@
 'use strict';
 
-module.exports = new Amount()
-function Amount(amount) {
+var Amount = function(amount) {
   this.amount = amount;
   this.twoPounds = 0;
   this.onePound = 0;
@@ -51,3 +50,5 @@ Amount.prototype.setTwoP = function (amount) {
 Amount.prototype.setOneP = function (amount) {
   this.oneP = Math.floor(amount / 0.01);
 };
+
+module.exports = Amount;
