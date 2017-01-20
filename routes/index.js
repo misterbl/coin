@@ -15,11 +15,8 @@ router.get('/', function (req, res) {
 router.post('/', function (req, res) {
   var amount = new Amount(req.body.amount);
   amount.convert();
-  console.log(amount.twoPounds);
-  // amount.convert().then(function(amount){
   res.render('result', {amount: amount});
 });
-// });
 
 
 module.exports = router;
