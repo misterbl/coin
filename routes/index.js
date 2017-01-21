@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
 router.post('/', function (req, res) {
   var amount = new Amount(req.body.amount);
   amount.checkAmount();
-  res.render('result', {amount: amount});
+  res.render('result', {amount: amount, input: req.body.amount});
 });
 
 

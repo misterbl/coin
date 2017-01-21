@@ -1,13 +1,9 @@
-var models = require('../models');
-var User = require('../models').User;
-var user = require('SpecHelper')
+var Amount = require('../public/javascripts/amount.js');
+var amount= require('SpecHelper')
 
 
-describe ('User', function () {
+describe ('Amount', function () {
   var user;
-
-
-
 
   it ('has a username', function () {
     user = models.User.create({
