@@ -39,7 +39,7 @@ Amount.prototype.checkAmount = function () {
 
 Amount.prototype.convert = function () {
   // this.amount = (this.amount).replace(/£|p|P/g,'')
-  if ((this.amount).match(/^[.]+$/igm) || (this.amount)[(this.amount).length - 1] != ('p' || 'P')) {
+  if ((this.amount).match(/^[.]+$/igm) || ((this.amount)[(this.amount).length - 1] != ('p' || 'P') && (this.amount[0] == '£')) || (this.amount[0] == '£')) {
     this.amount = (parseFloat((this.amount).replace(/£|p|P/g,''))) * 100
   }
   else {
