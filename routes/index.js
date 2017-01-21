@@ -2,7 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
-var Amount = require('../models/amount.js');
+var Amount = require('../public/javascripts/amount.js');
 var session = require('express-session');
 var sess;
 
@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   var amount = new Amount(req.body.amount);
-  amount.convert();
+  amount.checkAmount();
   res.render('result', {amount: amount});
 });
 

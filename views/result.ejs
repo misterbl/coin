@@ -8,7 +8,7 @@
     <h1> For an amount of <%= amount.amount %></h1><br>
     <h1>The equivalent in coins is:</h1><br>
     <% if (amount.twoPounds > 0) { %>
-    <h2> £2 coins: <%= amount.twoPounds %></h2> <br>
+    <h2> <%= amount.twoPounds %> X <img src="https://s28.postimg.org/vp1if3eot/image.png" alt="two pounds coin" style="width:20%;height:20%"></h2> <br>
     <% } %>
 
     <% if (amount.onePound > 0) { %>
