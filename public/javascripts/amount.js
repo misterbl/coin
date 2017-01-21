@@ -40,10 +40,10 @@ Amount.prototype.checkAmount = function () {
 Amount.prototype.convert = function () {
   // this.amount = (this.amount).replace(/£|p|P/g,'')
   if ((this.amount).match(/^[.]+$/igm) || (this.amount)[(this.amount).length - 1] != ('p' || 'P')) {
-    this.amount = (parseFloat((this.amount).replace(/£|p|P/g,'')) * 100
+    this.amount = (parseFloat((this.amount).replace(/£|p|P/g,''))) * 100
   }
   else {
-    this.amount = (parseFloat((this.amount).replace(/£|p|P/g,''));
+    this.amount = (parseFloat((this.amount).replace(/£|p|P/g,'')));
   };
   this.setTwoPounds();
 };
