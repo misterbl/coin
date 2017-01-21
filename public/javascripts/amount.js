@@ -13,33 +13,20 @@ var Amount = function(amount) {
 };
 
 Amount.prototype.checkAmount = function () {
-
-  // var pennies = /(p)/g;
-  // var pounds = /(£)/g;
-    // if ((this.amount[0] == '£' && !this.amount.test(pennies)) ||
-    // (this.amount.slice(-1) == ('p' || 'P') && !this.amount.test(pounds))){
-    // this.amount = parseFloat(this.amount.replace(/[^0-9-.-,]/g, ''));
-    // this.amount = parseFloat(this.amount.replace(/[^,]/g, '.'));
-    // }
-    var length = (this.amount).length
-    if ((this.amount[0] == '£') || (this.amount[length - 1] == ('p' || 'P')) || ((this.amount).match(/^[0-9.]+$/igm))) {
-      this.convert();
-    }
-    else {
-      alert ("This is not a valid input")
-    };
-
-    // if(!this.amount.match(/^[0-9.]+$/igm)) {
-    //   alert ("This is not a valid input")
-    // }
-    // else {
-    //   this.convert();
-    // }
+  var length = (this.amount).length
+  if ((this.amount[0] == '£') || (this.amount[length - 1] == ('p' || 'P')) ||
+  ((this.amount).match(/^[0-9.]+$/igm))) {
+    this.convert();
+  }
+  else {
+    alert ("This is not a valid input")
+  };
 };
 
 Amount.prototype.convert = function () {
-  // this.amount = (this.amount).replace(/£|p|P/g,'')
-  if ((this.amount).match(/^[.]+$/igm) || ((this.amount)[(this.amount).length - 1] != ('p' || 'P') && (this.amount[0] == '£')) || (this.amount[0] == '£')) {
+  if ((this.amount).match(/^[.]+$/igm) ||
+  ((this.amount)[(this.amount).length - 1] != ('p' || 'P') &&
+  (this.amount[0] == '£')) || (this.amount[0] == '£')) {
     this.amount = (parseFloat((this.amount).replace(/£|p|P/g,''))) * 100
   }
   else {
