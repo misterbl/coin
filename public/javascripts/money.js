@@ -34,54 +34,58 @@ Money.prototype.convert = function () {
   else {
     this.amount = (parseFloat((this.amount).replace(/£|p|P/g,'')));
   };
-  this.setTwoPounds();
+  this.setTwoPounds(this.amount);
 };
 
-Money.prototype.setTwoPounds = function () {
+Money.prototype.setTwoPounds = function (amount) {
   // if any, calculate the number of £2 coins that makes the input
-  this.twoPounds = Math.floor(this.amount / 200);
+  this.twoPounds = this.number(amount, 200);
   this.setOnePound((this.amount - this.twoPounds * 200));
 };
 
 Money.prototype.setOnePound = function (amount) {
     // if any, calculate the number of £1 coins that makes the input
-  this.onePound = Math.floor(amount / 100);
+  this.onePound = this.number(amount, 100);
   this.setFiftyP((amount - this.onePound * 100));
 };
 
 Money.prototype.setFiftyP = function (amount) {
     // if any, calculate the number of 50p coins that makes the input
-  this.fiftyP = Math.floor(amount / 50);
+  this.fiftyP = this.number(amount, 20);
   this.setTwentyP((amount - this.fiftyP * 50));
 };
 
 Money.prototype.setTwentyP = function (amount) {
     // if any, calculate the number of 20p coins that makes the input
-  this.twentyP = Math.floor(amount / 20);
+  this.twentyP = this.number(amount, 20);
   this.setTenP((amount - this.twentyP * 20));
 };
 
 Money.prototype.setTenP = function (amount) {
     // if any, calculate the number of 10p coins that makes the input
-  this.tenP = Math.floor(amount / 10);
+  this.tenP = this.number(amount, 10);
   this.setFiveP((amount - this.tenP * 10));
 };
 
 Money.prototype.setFiveP = function (amount) {
     // if any, calculate the number of 5p coins that makes the input
-  this.fiveP = Math.floor(amount / 5);
+  this.fiveP = this.number(amount, 5);
   this.setTwoP((amount - this.fiveP * 5));
 };
 
 Money.prototype.setTwoP = function (amount) {
     // if any, calculate the number of 2p coins that makes the input
-  this.twoP = Math.floor(amount / 2);
+  this.twoP = this.number(amount, 2);
   this.setOneP((amount - this.twoP * 2));
 };
 
 Money.prototype.setOneP = function (amount) {
     // if any, calculate the number of 1p coins that makes the input
-  this.oneP = Math.floor(amount / 1);
+    this.oneP = this.number(amount, 1);
+};
+
+Money.prototype.number = function(amount, divider){
+  return Math.floor(amount / divider)
 };
 
 module.exports = Money;

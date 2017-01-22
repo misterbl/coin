@@ -4,6 +4,7 @@ body {
 }
 
 a {
+  font: 30px;
   color: black;
 }
 
@@ -19,4 +20,13 @@ form {
   color: #ff5a60;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+.number {
+  text-align: left;
+  font-size: 4em;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    color: grey;
 }

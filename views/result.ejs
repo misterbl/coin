@@ -9,13 +9,15 @@
     <% if (money) { %>
     <h1>The equivalent in coins of <%= money.amount %>p is:</h1><br>
     <% if (money.twoPounds > 0) { %>
-    <h2> <%= money.twoPounds %> X <img src="https://s28.postimg.org/vp1if3eot/image.png" alt="two pounds coin" style="width:20%;height:20%"></h2> <br>
+      <div class="number">
+    <h2> <%= money.twoPounds %> X <img src="https://s23.postimg.org/vpfdimokr/image.png" alt="two pounds coin" style="width:30%;height:85%"></h2>
     <% } %>
-
+  </div>
     <% if (money.onePound > 0) { %>
-    <h2>£1 coins: <%= money.onePound %></h2><br>
+      <div class="number">
+    <h2><%= money.onePound %> X <img src="https://s23.postimg.org/xqbtysf3v/1coin.png" alt="one pounds coin" style="width:30%;height:85%"></h2><br>
     <% } %>
-
+  </div>
     <% if (money.fiftyP > 0) { %>
     <h2>50p coins: <%= money.fiftyP %></h2><br>
     <% }  %>
