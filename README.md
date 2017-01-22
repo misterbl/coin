@@ -32,7 +32,7 @@ In the command line:
 
 5. npm run start
 
-6. Then go to [localhost:3000](localhost:3000) and try the app out.
+6. Then go to [localhost:3000](http://localhost:3000) and try the app out.
 
 
 ## How to test
