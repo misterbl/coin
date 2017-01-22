@@ -18,6 +18,8 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "jasmine": "^2.5.3"
+    "coveralls": "^2.11.15",
+    "jasmine": "^2.5.3",
+    "travis": "^0.1.1"
   }
 }
