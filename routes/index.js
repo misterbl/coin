@@ -14,8 +14,13 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   var amount = new Amount(req.body.amount);
-  amount.checkAmount();
+  if (amount.checkAmount() != false){
   res.render('result', {amount: amount, input: req.body.amount});
+}
+else if (amount.checkAmount() == false) {
+  console.log("hello2");
+res.render('result', {amount: null});
+}
 });
 
 

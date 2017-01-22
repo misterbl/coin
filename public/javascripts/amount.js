@@ -14,12 +14,12 @@ var Amount = function(amount) {
 
 Amount.prototype.checkAmount = function () {
   var length = (this.amount).length
-  if ((this.amount[0] == '£') || (this.amount[length - 1] == ('p' || 'P')) ||
-  ((this.amount).match(/^[0-9.]+$/igm))) {
+  if (((this.amount).match(/^[0-9]+$/igm)) && ((this.amount[0] == '£') || (this.amount[length - 1] == ('p' || 'P')) ||
+  ((this.amount).match(/^[0-9.]+$/igm)))) {
     this.convert();
   }
   else {
-    alert ("This is not a valid input")
+    return false;
   };
 };
 
