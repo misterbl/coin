@@ -4,9 +4,14 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
 
+div {
+
+
+
+}
 form {
   display: flex;
   margin: 0 15%;
