@@ -14,7 +14,7 @@ var Amount = function(amount) {
 
 Amount.prototype.checkAmount = function () {
   var length = (this.amount).length
-  if (((this.amount).match(/^[0-9]+$/igm)) && ((this.amount[0] == '£') || (this.amount[length - 1] == ('p' || 'P')) ||
+  if ((/\d/.test(this.amount)) && ((this.amount[0] == '£') || (this.amount[length - 1] == ('p' || 'P')) ||
   ((this.amount).match(/^[0-9.]+$/igm)))) {
     this.convert();
   }
@@ -24,7 +24,7 @@ Amount.prototype.checkAmount = function () {
 };
 
 Amount.prototype.convert = function () {
-  if ((this.amount).match(/^[.]+$/igm) ||
+  if ((/\./.test(this.amount)) ||
   ((this.amount)[(this.amount).length - 1] != ('p' || 'P') &&
   (this.amount[0] == '£')) || (this.amount[0] == '£')) {
     this.amount = (parseFloat((this.amount).replace(/£|p|P/g,''))) * 100
