@@ -16,10 +16,10 @@ Given a number of pennies, the application will calculate the minimum number of 
 The application recognise invalid inputs such as invalid character, valid character in the wrong position, missing value etc...
 
 
-## How to use online
+## How to use the app online
 [click here](https://bbc-coins.herokuapp.com/)
 
-## How to use locally
+## How to use the app locally
 In the command line:
 
 1. git clone https://github.com/misterbl/coin.git
