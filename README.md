@@ -12,9 +12,9 @@
 
 
 ## Features
-
 Given a number of pennies, the application will calculate the minimum number of Sterling coins needed to make that amount.
 The application recognise invalid inputs such as invalid character, valid character in the wrong position, missing value etc...
+
 
 ## How to use online
 [click here](https://bbc-coins.herokuapp.com/)
@@ -22,7 +22,7 @@ The application recognise invalid inputs such as invalid character, valid charac
 ## How to use locally
 In the command line:
 
-1. git clone https://github.com/misterbl/coin
+1. git clone https://github.com/misterbl/coin.git
 
 2. cd coin
 
@@ -32,7 +32,7 @@ In the command line:
 
 5. npm run start
 
-6. Then go to localhost:3000 and try the app out.
+6. Then go to [localhost:3000](localhost:3000) and try the app out.
 
 
 ## How to test
