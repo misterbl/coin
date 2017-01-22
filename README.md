@@ -21,6 +21,7 @@ The application recognise invalid inputs such as invalid character, valid charac
 
 ## How to use locally
 In the command line:
+
 1. git clone https://github.com/misterbl/coin
 
 2. cd coin
