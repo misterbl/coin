@@ -6,42 +6,42 @@
     <title></title>
   </head>
   <body style="background-color:#006400;">
-    <% if (amount) { %>
+    <% if (money) { %>
     <h1>The equivalent in coins of <%= input %> is:</h1><br>
-    <% if (amount.twoPounds > 0) { %>
-    <h2> <%= amount.twoPounds %> X <img src="https://s28.postimg.org/vp1if3eot/image.png" alt="two pounds coin" style="width:20%;height:20%"></h2> <br>
+    <% if (money.twoPounds > 0) { %>
+    <h2> <%= money.twoPounds %> X <img src="https://s28.postimg.org/vp1if3eot/image.png" alt="two pounds coin" style="width:20%;height:20%"></h2> <br>
     <% } %>
 
-    <% if (amount.onePound > 0) { %>
-    <h2>£1 coins: <%= amount.onePound %></h2><br>
+    <% if (money.onePound > 0) { %>
+    <h2>£1 coins: <%= money.onePound %></h2><br>
     <% } %>
 
-    <% if (amount.fiftyP > 0) { %>
-    <h2>50p coins: <%= amount.fiftyP %></h2><br>
+    <% if (money.fiftyP > 0) { %>
+    <h2>50p coins: <%= money.fiftyP %></h2><br>
     <% }  %>
 
-    <% if (amount.twentyP > 0) { %>
-    <h2>20p coins: <%= amount.twentyP %></h2><br>
+    <% if (money.twentyP > 0) { %>
+    <h2>20p coins: <%= money.twentyP %></h2><br>
     <% }  %>
 
-    <% if (amount.tenP > 0) { %>
-    <h2>10p coins: <%= amount.tenP %></h2><br>
+    <% if (money.tenP > 0) { %>
+    <h2>10p coins: <%= money.tenP %></h2><br>
     <% }  %>
 
-    <% if (amount.fiveP > 0) { %>
-    <h2>5p coins: <%= amount.fiveP %></h2><br>
+    <% if (money.fiveP > 0) { %>
+    <h2>5p coins: <%= money.fiveP %></h2><br>
     <% }  %>
 
-    <% if (amount.twoP > 0) { %>
-    <h2>2p coins: <%= amount.twoP %></h2><br>
+    <% if (money.twoP > 0) { %>
+    <h2>2p coins: <%= money.twoP %></h2><br>
     <% }  %>
 
-    <% if (amount.oneP > 0) { %>
-    <h2>1p coins: <%= amount.oneP %></h2>
+    <% if (money.oneP > 0) { %>
+    <h2>1p coins: <%= money.oneP %></h2>
     <% }  %>
     <% } %>
 
-      <% if (!amount) { %>
+      <% if (!money) { %>
     <h1>You haven't entered a valid number</h1>
     <form action="/">
       <input type="submit" value="Try again" />

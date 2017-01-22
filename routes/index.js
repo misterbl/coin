@@ -2,7 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
-var Amount = require('../public/javascripts/amount.js');
+var Money = require('../public/javascripts/money.js');
 
 
 /* GET home page. */
@@ -11,12 +11,12 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-  var amount = new Amount(req.body.amount);
-  if (amount.checkAmount() != false){
-    res.render('result', {amount: amount, input: req.body.amount});
+  var money = new Money (req.body.amount);
+  if (money.checkAmount() != false){
+    res.render('result', {money: money, input: req.body.amount});
   }
-  else if (amount.checkAmount() == false) {
-    res.render('result', {amount: null});
+  else if (money.checkAmount() == false) {
+    res.render('result', {money: null});
   }
 });
 
