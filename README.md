@@ -22,15 +22,17 @@ The application recognise invalid inputs such as invalid character, valid charac
 ## How to use locally
 In the command line:
 1. git clone https://github.com/misterbl/coin
+
 2. cd coin
+
 3. Make sure you have Node JS installed
+
 4. npm install
+
 5. npm run start
+
 6. Then go to localhost:3000 and try the app out.
 
 
 ## How to test
-
-Once cloned use:
-
-jasmine-node spec
+Once cloned use: jasmine-node spec
