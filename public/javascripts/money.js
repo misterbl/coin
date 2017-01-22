@@ -12,6 +12,7 @@ var Money = function(amount) {
   this.oneP = 0;
 };
 
+
 Money.prototype.checkAmount = function () {
   // checks if the input is valid
   var length = (this.amount).length
@@ -27,8 +28,9 @@ Money.prototype.checkAmount = function () {
 
 Money.prototype.convert = function () {
   // convert the input to pennies if it is in £
+  var length = (this.amount).length
   if ((/\./.test(this.amount)) ||
-  ((this.amount)[(this.amount).length - 1] != ('p' || 'P') &&
+  ((this.amount)[length - 1] != ('p' || 'P') &&
   (this.amount[0] == '£')) || (this.amount[0] == '£')) {
     this.amount = (parseFloat((this.amount).replace(/£|p|P/g,''))) * 100
   }
