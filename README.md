@@ -6,7 +6,7 @@
 
 - Node.js: 3.10.10
 
-- Framework: Express
+- Framework: Express 4.14.0
 
 - CSS, HTML5, Bootstrap
 
