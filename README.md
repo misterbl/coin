@@ -10,6 +10,8 @@
 
 - CSS, HTML5, Bootstrap
 
+- Testing Framework: Jasmine
+
 
 ## Features
 Given a number of pennies, the application will calculate the minimum number of Sterling coins needed to make that amount.
