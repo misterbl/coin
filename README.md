@@ -4,7 +4,7 @@
 
 - Javascript
 
-- Node JS: 3.10.10
+- Node.js: 3.10.10
 
 - Framework: Express
 
