@@ -15,7 +15,7 @@ router.post('/', function (req, res) {
   if (money.checkAmount() != false){
     res.render('result', {money: money, input: req.body.amount});
   }
-  else if (money.checkAmount() == false) {
+  else  {
     res.render('result', {money: null});
   }
 });

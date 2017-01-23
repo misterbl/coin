@@ -5,22 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/stylesheets/style.css" media="screen" title="no title">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <title></title>
 </head>
-<body background="https://s27.postimg.org/ijvtzg2tv/ukcoins2007.png" style="background-color:#006400;">
-<div style = "background-color: red">
-  <h1 style="border-style: solid; border-radius: 50px; border-color: red; border-width: 0.8em"><a style = "color: #6d3067;">Enter an amount in pennies below (e.g. 245p)</a><br>
-    <a style = "color: #6d3067;">You can enter the amount in pounds too (e.g. £2.45)</a></h1>
-</div>
-  <div class="container">
+<body >
+  <div id = "input" >
+  <h1  style = "color: #6DC8C8; margin-left: 5%; font-size: 300%">Coins converter</h1><br>
+    <h2 style = "color: #FFFFFF;"><p style = "color: #FFFFFF;"style = "color: #FFFFFF;">Enter an amount in pennies (e.g. 245p)</p><p style = "color: #FFFFFF;"> or in pounds (e.g. £2.24)</p></h2>
+  <div>
     <form action="/" method="post">
-      <div class="form-group">
-        <input class="form-control" name="amount" placeholder="Amount">
-      </div>
-      <button type="submit" class="btn btn-default">Check</button>
+        <input name="amount" placeholder="Amount">
+      <button class = "button" type="submit">Check</button>
     </form>
+  </div>
   </div>
 </body>
 

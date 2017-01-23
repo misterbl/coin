@@ -21,7 +21,7 @@ Money.prototype.checkAmount = function () {
             ((this.amount).match(/^[0-9.]+$/igm)))) {
         this.convert();
     }
-  else {
+    else {
             return false;
         };
 };
@@ -34,7 +34,7 @@ Money.prototype.convert = function () {
             (this.amount[0] === '£')) || (this.amount[0] === '£')) {
         this.amount = (parseFloat((this.amount).replace(/£|p|P/g, ''))) * 100;
     }
-  else {
+    else {
             this.amount = (parseFloat((this.amount).replace(/£|p|P/g,'')));
         };
     this.setTwoPounds(this.amount);

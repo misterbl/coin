@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="/stylesheets/style.css" media="screen" title="no title">
     <title></title>
   </head>
-  <body style="background-color:#006400;">
+  <body>
     <% if (money) { %>
-    <h1 style= "font-size: 3em">The equivalent in coins of <%= input %> is:</h1>
+    <h1 style = "color: #6DC8C8; margin-left: 30%; margin-top: 5%">The equivalent in coins of <%= input %> is:</h1>
     <% if (money.twoPounds > 0) { %>
       <div class="number">
     <h5> <%= money.twoPounds %> X <img src="https://s23.postimg.org/vpfdimokr/image.png" alt="two pounds coin" style="width:30%;height:85%"></h5>
@@ -54,14 +54,14 @@
     </div>
     <% }  %>
     <form action="/" style = "display: flex; margin: 0 15%; justify-content: bottom; color: #ff5a60; margin-left: 10%;">
-      <input type="submit" value="Back Home" style="width:100px; color: red;"/>
+      <button class = "button" type="submit">Back Home</button>
   </form>
     <% } %>
 
       <% if (!money) { %>
-    <h1 style= "font-size: 3em">You haven't entered a valid amount</h1>
+    <h1 style = "color: #6DC8C8; margin-left: 30%; margin-top: 10%">You haven't entered a valid amount</h1>
     <form action="/" style = "display: flex; margin: 0 15%; justify-content: bottom; color: #ff5a60; margin-top: 5%; margin-left: 10%;">
-      <input type="submit" value="Try again" style="width:100px; color: red;"/>
+      <button class = "button" type="submit">Try again</button>
   </form>
   <% } %>
 
