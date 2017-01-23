@@ -26,7 +26,7 @@ In the command line:
 
 2. cd coin
 
-3. Make sure you have Node JS installed
+3. Make sure you have Node.js installed (You can dowload it here: [Node.js](https://nodejs.org/en/download/)
 
 4. npm install
 
